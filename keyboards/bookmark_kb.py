@@ -1,7 +1,11 @@
 from aiogram.types import InlineKeyboardButton
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 from lexicon.lexicon import LEXICON
+from aiogram.filters.callback_data import CallbackData
 
+class Buttons(CallbackData, prefix='bookmark'):
+    a: int
+    b: int
 
 def create_bookmark(marks: set[str]):
     lst = []
